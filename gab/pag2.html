@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Nossas Memórias</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      text-align: center;
+      background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+      color: #333;
+    }
+
+    .slideshow-container {
+      position: relative;
+      max-width: 600px;
+      margin: 50px auto 20px auto;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
+
+    .slide {
+      display: none;
+    }
+
+    .slide img {
+      width: 100%;
+      border-radius: 20px;
+    }
+
+    .fade {
+      animation: fade 1.5s;
+    }
+
+    @keyframes fade {
+      from {opacity: .4} 
+      to {opacity: 1}
+    }
+
+    p {
+      font-size: 20px;
+      margin-top: 20px;
+      padding: 0 15px;
+      color: #444;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>💖 Casal de Mamãe Oxum  💖</h1>
+
+  <!-- Slideshow -->
+  <div class="slideshow-container">
+    <div class="slide fade">
+      <img src="foto1.jpeg" alt="Foto 1">
+    </div>
+    <div class="slide fade">
+      <img src="foto2.jpeg" alt="Foto 2">
+    </div>
+    <div class="slide fade">
+      <img src="foto3.jpeg" alt="Foto 3">
+    </div>
+  </div>
+
+  <!-- Textinho -->
+  <p>
+    Amor, eu nem sei por onde começar pra dizer o quanto eu te amo e sou grato por ter você na minha vida. Te amo muiiitooo, de verdade, muito messsmo kkk. Você não é só alguém especial, você é raro, daqueles que chegam e transformam tudo: os dias ruins ficam mais leves e os dias bons viram lembranças que eu nunca vou esquecer. Estar contigo me dá uma paz que não encontro em mais lugar nenhum, como se você fosse meu ponto de equilíbrio em meio a tanta correria e bagunça da vida.
+
+O que eu mais admiro em você é como consegue me acolher do jeitinho que eu sou, sem julgamentos, sem máscaras. Você me escuta, me entende e até me enxerga quando nem eu sei me explicar direito. Seu carinho, atenção e jeitinho de me tratar me fazem sentir valorizado e amado de verdade.
+
+Obrigado por cada detalhe: pelas palavras certas, pelos sorrisos espontâneos, pelos conselhos, pela paciência e até pelas brincadeiras que parecem simples, mas que mudam completamente o meu dia. Sei que a vida nem sempre é fácil, mas ter você do meu lado torna tudo mais leve e bonito.
+
+Te conhecer foi um presente que vou guardar pra sempre. Você é uma das maiores certezas que já tive e uma das coisas mais lindas que já me aconteceu. Não importa o que venha pela frente, só quero que saiba que vou estar sempre aqui, e o que eu sinto por você não depende de momento, distância ou dificuldade.
+
+Obrigado por ser exatamente quem você é: incrível, verdadeiro e essencial na minha vida. Te amo muiiitooo, amor, e quero caminhar contigo, hoje e sempre. 💛
+  </p>
+
+  <!-- Música de fundo -->
+  <audio autoplay loop>
+    <source src="pelo-tempo-que-durar.mp3" type="audio/mp3">
+    Seu navegador não suporta áudio.
+  </audio>
+
+  <script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let slides = document.getElementsByClassName("slide");
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      slides[slideIndex-1].style.display = "block";  
+      setTimeout(showSlides, 3000); // troca a cada 3s
+    }
+  </script>
+
+</body>
+</html>
